@@ -1,0 +1,87 @@
+{
+	"shared": {
+		"exprs": {
+			"created_by": "ایجاد توسط",
+			"created_at": "زمان ایجاد",
+			"updated_at": "آخرین بروزرسانی",
+			"actions": "عملیات‌ها",
+			"filters": "فیلترها",
+			"empty": "موردی یافت نشد.",
+
+			"create": "ایجاد",
+			"update": "بروزرسانی",
+			"delete": "حذف",
+			"add": "افزودن",
+			"edit": "ویرایش",
+			"remove": "حذف",
+			"cancel": "بازگشت",
+			"reset": "ریست",
+			"filter": "فیلتر"
+		},
+
+		"errors": {
+			"unknown": "خطای ناشناخته‌ای رخ داده است.",
+			"internal": "اوه! مشکلی پیش آمده است.",
+			"required": "پر کردن این فیلد الزامی است.",
+			"invalid": "مقدار وارد شده نامعتبر است.",
+			"duplicate": "موردی با این مقدار از پیش وجود دارد.",
+			"duplicate_fn": "موردی با مقدار \"{value}\" از پیش وجود دارد."
+		},
+
+		"components": {
+			"loading": { "label": "در حال دریافت اطلاعات..." },
+
+			"filter-bar": {
+				"title": "فیلترهای اعمال شده",
+				"clear_all": "حذف همه فیلترها"
+			},
+
+			"pagination": {
+				"previous": {
+					"title": "قبلی",
+					"description": "به صفحه قبل برو"
+				},
+				"next": {
+					"title": "بعدی",
+					"description": "به صفحه بعد برو"
+				}
+			},
+
+			"confirm-dialog": {
+				"title": "آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
+				"description": "پس از انجام این کار، دیگر نمی‌توانید آن را بازگردانید."
+			}
+		}
+	},
+
+	"app": {
+		"root": {
+			"routes": {
+				"dashboard": "پیشخوان"
+			}
+		},
+
+		"dashboard": {
+			"root": {
+				"sidebar": {
+					"menu": {
+						"items": {
+							"dashboard": {
+								"title": "پیشخوان"
+							},
+							"products": {
+								"title": "محصولات"
+							}
+						}
+					}
+				},
+
+				"language": {
+					"title": "زبان‌ها"
+				}
+			}
+		}
+	},
+
+	"features": {}
+}

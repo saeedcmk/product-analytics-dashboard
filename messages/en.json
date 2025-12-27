@@ -1,0 +1,87 @@
+{
+	"shared": {
+		"exprs": {
+			"created_by": "Created By",
+			"created_at": "Created At",
+			"updated_at": "Last Modified At",
+			"actions": "Actions",
+			"filters": "Filters",
+			"empty": "No items found.",
+
+			"create": "Create",
+			"update": "Update",
+			"delete": "Delete",
+			"add": "Add",
+			"edit": "Edit",
+			"remove": "Remove",
+			"cancel": "Cancel",
+			"reset": "Reset",
+			"filter": "Filter"
+		},
+
+		"errors": {
+			"unknown": "An unknown error has occurred.",
+			"internal": "Oops! Something went wrong.",
+			"required": "This field is requierd.",
+			"invalid": "The value entered is invalid.",
+			"duplicate": "An item with this value already exists.",
+			"duplicate_fn": "An item with value \"{value}\" already exists."
+		},
+
+		"components": {
+			"loading": { "label": "Retrieving data..." },
+
+			"filter-bar": {
+				"title": "Applied filters",
+				"clear_all": "Remove all filters"
+			},
+
+			"pagination": {
+				"previous": {
+					"title": "Previous",
+					"description": "Go to previous page"
+				},
+				"next": {
+					"title": "Next",
+					"description": "Go to next page"
+				}
+			},
+
+			"confirm-dialog": {
+				"title": "Are you sure you want to proceed?",
+				"description": "You can’t undo this action once it’s completed."
+			}
+		}
+	},
+
+	"app": {
+		"root": {
+			"routes": {
+				"dashboard": "Dashboard"
+			}
+		},
+
+		"dashboard": {
+			"root": {
+				"sidebar": {
+					"menu": {
+						"items": {
+							"dashboard": {
+								"title": "Dashboard"
+							},
+							"products": {
+								"title": "Products"
+							}
+						}
+					}
+				},
+
+				"language": {
+					"title": "Languages"
+				}
+			}
+		}
+	},
+
+	"features": {}
+}
