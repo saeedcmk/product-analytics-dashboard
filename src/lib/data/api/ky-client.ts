@@ -14,8 +14,4 @@ function kyClient(baseURL?: string): KyInstance {
 	});
 }
 
-const apiClient = kyClient("/api").extend({
-	retry: 0,
-});
-
-export { apiClient, kyClient };
+export { kyClient };
