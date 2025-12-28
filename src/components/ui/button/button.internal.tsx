@@ -21,7 +21,7 @@ const buttonVariants = cva(
 			},
 
 			size: {
-				base: "h-9 px-4 py-2 has-[>svg]:px-3",
+				base: "h-9 px-3 py-2 has-[>svg]:px-3",
 				sm: "h-8 gap-1.5 px-3 has-[>svg]:px-2.5",
 				lg: "h-10 px-6 has-[>svg]:px-4",
 				icon: "size-9",
@@ -60,7 +60,7 @@ const buttonVariants = cva(
 				variant: "outline",
 				color: "inverse",
 				className:
-					"border-foreground text-foreground hover:bg-foreground/10 active:bg-foreground/20 focus-visible:ring-foreground/30 focus-visible:border-foreground",
+					"hover:bg-foreground/10 active:bg-foreground/20 focus-visible:ring-foreground/30 border-neutral-200 text-neutral-700 focus-visible:border-neutral-200",
 			},
 			{
 				variant: "outline",

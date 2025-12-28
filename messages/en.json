@@ -57,7 +57,9 @@
 	"app": {
 		"root": {
 			"routes": {
-				"dashboard": "Dashboard"
+				"dashboard": "Dashboard",
+				"products": "Products",
+				"product": "Product Details"
 			}
 		},
 
@@ -83,5 +85,27 @@
 		}
 	},
 
-	"features": {}
+	"features": {
+		"product": {
+			"types": {
+				"product": {
+					"name": "Name",
+					"description": "Description",
+					"price": "Price",
+					"category": "Category"
+				}
+			},
+
+			"components": {
+				"product-list": {
+					"title": "Products",
+					"item": {
+						"actions": {
+							"view": "View Product"
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -67,25 +67,22 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
 	);
 }
 
-const cardActionsVariants = cva(
-	"ms-auto flex flex-col flex-wrap items-end gap-1.5",
-	{
-		variants: {
-			breakpoint: {
-				xs: "",
-				sm: "sm:flex-row",
-				md: "md:flex-row",
-				lg: "lg:flex-row",
-				xl: "xl:flex-row",
-				"2xl": "2xl:flex-row",
-				none: "flex-row",
-			},
+const cardActionsVariants = cva("flex flex-col flex-wrap items-end gap-1.5", {
+	variants: {
+		breakpoint: {
+			xs: "",
+			sm: "sm:ms-auto sm:flex-row",
+			md: "md:ms-auto md:flex-row",
+			lg: "lg:ms-auto lg:flex-row",
+			xl: "xl:ms-auto xl:flex-row",
+			"2xl": "2xl:ms-auto 2xl:flex-row",
+			none: "ms-auto flex-row",
 		},
-		defaultVariants: {
-			breakpoint: "none",
-		},
-	}
-);
+	},
+	defaultVariants: {
+		breakpoint: "none",
+	},
+});
 
 type CardActionsProps = React.ComponentProps<"div"> &
 	VariantProps<typeof cardActionsVariants>;
