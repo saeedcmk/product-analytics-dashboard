@@ -31,11 +31,6 @@
 		"components": {
 			"loading": { "label": "در حال دریافت اطلاعات..." },
 
-			"filter-bar": {
-				"title": "فیلترهای اعمال شده",
-				"clear_all": "حذف همه فیلترها"
-			},
-
 			"pagination": {
 				"previous": {
 					"title": "قبلی",
@@ -47,9 +42,8 @@
 				}
 			},
 
-			"confirm-dialog": {
-				"title": "آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
-				"description": "پس از انجام این کار، دیگر نمی‌توانید آن را بازگردانید."
+			"redirect-to-products": {
+				"label": "بزن بریم صفحه محصولات"
 			}
 		}
 	},
@@ -57,7 +51,9 @@
 	"app": {
 		"root": {
 			"routes": {
-				"dashboard": "پیشخوان"
+				"dashboard": "پیشخوان",
+				"products": "محصولات",
+				"product": "جزئیات محصول"
 			}
 		},
 
@@ -83,5 +79,58 @@
 		}
 	},
 
-	"features": {}
+	"features": {
+		"product": {
+			"types": {
+				"product": {
+					"title": "عنوان",
+					"description": "توضیحات",
+					"price": "قیمت",
+					"category": "دسته‌بندی",
+					"brand": "برند",
+					"availabilityStatus": "وضعیت موجودی"
+				}
+			},
+
+			"components": {
+				"product-list": {
+					"title": "محصولات",
+					"filter": {
+						"search": "جستجوی محصولات...",
+						"all_categories": "همه دسته‌بندی‌ها"
+					},
+					"sort": {
+						"title": "ترتیب",
+						"asc": {
+							"short": "افزایشی",
+							"long": "افزایشی"
+						},
+						"desc": {
+							"short": "کاهشی",
+							"long": "کاهشی"
+						}
+					},
+					"filter_warning": "به دلیل محدودیت‌های API، تنها یک فیلتر در هر زمان قابل اعمال است. در صورت انتخاب هم‌زمان جستجو و دسته‌بندی، فقط یکی از آن‌ها اعمال خواهد شد.",
+					"item": {
+						"actions": {
+							"view": "مشاهده محصول"
+						}
+					}
+				},
+
+				"product-info": {
+					"rate": "امتیاز",
+					"stock": "موجودی",
+					"discount": "تخفیف"
+				},
+
+				"product-monthly-sale": {
+					"title": "فروش ماهانه",
+					"tooltip": {
+						"num_of_sales": "میزان فروش"
+					}
+				}
+			}
+		}
+	}
 }

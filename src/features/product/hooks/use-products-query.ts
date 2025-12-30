@@ -1,11 +1,11 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { ProductService } from "../product-service";
 import { DummyJsonProductRepository } from "../repository/dummy-json-product-repository";
-import { FetchProductsArgs } from "../repository/product-repository";
+import { GetProductsArgs } from "../repository/product-repository.interface";
 
 const productService = new ProductService(new DummyJsonProductRepository());
 
-export function useProductsQuery(args: FetchProductsArgs) {
+function useProductsQuery(args: GetProductsArgs) {
 	return useQuery({
 		queryKey: [
 			"products",
@@ -20,3 +20,5 @@ export function useProductsQuery(args: FetchProductsArgs) {
 		placeholderData: keepPreviousData,
 	});
 }
+
+export { useProductsQuery };

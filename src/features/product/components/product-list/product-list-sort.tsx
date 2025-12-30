@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowDown, ArrowUp, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import {
@@ -9,7 +10,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ProductSort } from "../types/product-sort";
+import { ProductSort } from "../../models/product-sort";
 
 const PRODUCT_SORT_PROPERTIES = [
 	"title",
@@ -23,6 +24,8 @@ function ProductListSort({
 	value: ProductSort;
 	onChange: (value: ProductSort) => void;
 }) {
+	const t = useTranslations();
+
 	return (
 		<ButtonGroup className="w-full lg:w-fit">
 			<DropdownMenu>
@@ -31,7 +34,8 @@ function ProductListSort({
 						className="grow justify-start lg:w-32 lg:justify-center"
 						variant="outline"
 					>
-						Sort by: <span className="capitalize">{value.key}</span>
+						{t("product-list.sort.title")}:{" "}
+						<span>{t(`product.${value.key}`)}</span>
 					</Button>
 				</DropdownMenuTrigger>
 
@@ -50,7 +54,7 @@ function ProductListSort({
 							<div className="size-4">
 								{value.key === key && <Check className="size-full" />}
 							</div>
-							<span className="capitalize">{key}</span>
+							<span>{t(`product.${key}`)}</span>
 						</DropdownMenuItem>
 					))}
 				</DropdownMenuContent>
@@ -58,15 +62,15 @@ function ProductListSort({
 
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
-					<Button className="w-20" variant="outline">
+					<Button className="w-20 rtl:w-24" variant="outline">
 						{value.direction === "asc" ? (
 							<>
-								Asc
+								{t("product-list.sort.asc.short")}
 								<ArrowUp className="size-4" />
 							</>
 						) : (
 							<>
-								Desc
+								{t("product-list.sort.desc.short")}
 								<ArrowDown className="size-4" />
 							</>
 						)}
@@ -80,7 +84,7 @@ function ProductListSort({
 					>
 						<div className="flex items-center gap-2">
 							<ArrowUp className="size-4" />
-							Ascending
+							{t("product-list.sort.asc.long")}
 						</div>
 						{value.direction === "asc" && <Check className="size-4" />}
 					</DropdownMenuItem>
@@ -91,7 +95,7 @@ function ProductListSort({
 					>
 						<div className="flex items-center gap-2">
 							<ArrowDown className="size-4" />
-							Descending
+							{t("product-list.sort.desc.long")}
 						</div>
 						{value.direction === "desc" && <Check className="size-4" />}
 					</DropdownMenuItem>

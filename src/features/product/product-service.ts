@@ -1,9 +1,9 @@
+import { Category } from "./models/category";
+import { Product } from "./models/product";
 import {
-	FetchProductsArgs,
+	GetProductsArgs,
 	IProductRepository,
-} from "./repository/product-repository";
-import { Product } from "./types/product";
-import { mapProductApiToDomain } from "./utils/map-product-api-to-domain";
+} from "./repository/product-repository.interface";
 
 interface ProductsPageResult {
 	products: Product[];
@@ -15,11 +15,11 @@ interface ProductsPageResult {
 class ProductService {
 	constructor(private readonly repository: IProductRepository) {}
 
-	async getProducts(args: FetchProductsArgs): Promise<ProductsPageResult> {
-		const response = await this.repository.fetchProducts(args);
+	async getProducts(args: GetProductsArgs): Promise<ProductsPageResult> {
+		const response = await this.repository.getProducts(args);
 
 		return {
-			products: response.products.map(mapProductApiToDomain),
+			products: response.products,
 			total: response.total,
 			page: Math.floor(response.skip / response.limit) + 1,
 			pageSize: response.limit,
@@ -27,13 +27,15 @@ class ProductService {
 	}
 
 	async getProductDetails(id: number): Promise<Product> {
-		const rawProduct = await this.repository.fetchProductById(id);
-
-		return mapProductApiToDomain(rawProduct);
+		return this.repository.getProductById(id);
 	}
 
-	async getCategories(): Promise<string[]> {
-		return this.repository.fetchCategories();
+	getMonthlySalesByProductId(productId: number) {
+		return this.repository.getMonthlySalesByProductId(productId);
+	}
+
+	async getCategories(): Promise<Category[]> {
+		return this.repository.getCategories();
 	}
 }
 

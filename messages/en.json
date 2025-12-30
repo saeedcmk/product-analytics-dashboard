@@ -31,11 +31,6 @@
 		"components": {
 			"loading": { "label": "Retrieving data..." },
 
-			"filter-bar": {
-				"title": "Applied filters",
-				"clear_all": "Remove all filters"
-			},
-
 			"pagination": {
 				"previous": {
 					"title": "Previous",
@@ -47,9 +42,8 @@
 				}
 			},
 
-			"confirm-dialog": {
-				"title": "Are you sure you want to proceed?",
-				"description": "You can’t undo this action once it’s completed."
+			"redirect-to-products": {
+				"label": "Let's go to the products page"
 			}
 		}
 	},
@@ -89,20 +83,51 @@
 		"product": {
 			"types": {
 				"product": {
-					"name": "Name",
+					"title": "Title",
 					"description": "Description",
 					"price": "Price",
-					"category": "Category"
+					"category": "Category",
+					"brand": "Brand",
+					"availabilityStatus": "Availability Status"
 				}
 			},
 
 			"components": {
 				"product-list": {
 					"title": "Products",
+					"filter": {
+						"search": "Search products...",
+						"all_categories": "All categories"
+					},
+					"sort": {
+						"title": "Sort by",
+						"asc": {
+							"short": "Asc",
+							"long": "Ascending"
+						},
+						"desc": {
+							"short": "Desc",
+							"long": "Descending"
+						}
+					},
+					"filter_warning": "Due to API limitations, only one filter can be applied at a time. When both search and category are selected, only one will be used.",
 					"item": {
 						"actions": {
 							"view": "View Product"
 						}
+					}
+				},
+
+				"product-info": {
+					"rate": "Rating",
+					"stock": "Stock",
+					"discount": "discount"
+				},
+
+				"product-monthly-sale": {
+					"title": "Monthly Sales",
+					"tooltip": {
+						"num_of_sales": "Sales"
 					}
 				}
 			}

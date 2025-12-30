@@ -31,6 +31,7 @@
 		"react-flagkit": "2.0.4",
 		"react-hook-form": "7.68.0",
 		"react-imask": "7.6.1",
+		"recharts": "3.6.0",
 		"rtl-detect": "1.1.2",
 		"tailwind-merge": "3.4.0",
 		"tailwindcss-animate": "1.0.7",

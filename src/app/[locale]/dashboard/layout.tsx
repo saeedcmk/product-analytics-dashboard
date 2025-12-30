@@ -52,7 +52,7 @@ async function DashboardLayout({
 							</div>
 						</header>
 
-						<div className="space-y-6 p-6">{children}</div>
+						<div className="grow space-y-6 p-6">{children}</div>
 					</BreadcrumbProvider>
 				</SidebarInset>
 			</SidebarProvider>

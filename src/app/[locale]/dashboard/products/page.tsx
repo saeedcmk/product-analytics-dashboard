@@ -4,7 +4,6 @@ import { usePartialMessages } from "@/lib/i18n/hooks/use-partial-messages";
 
 function ProductsPage() {
 	const messages = usePartialMessages([
-		"features.product.types.product",
 		"features.product.components.product-list",
 	]);
 
